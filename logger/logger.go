@@ -18,7 +18,7 @@ var (
 	log logger
 )
 
-type bookstoreLogger interface {
+type storeLogger interface {
 	Print(v ...interface{})
 	Printf(format string, v ...interface{})
 }
@@ -69,7 +69,7 @@ func getOutput() string {
 	return output
 }
 
-func GetLogger() bookstoreLogger {
+func GetLogger() storeLogger {
 	return log
 }
 
